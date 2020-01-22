@@ -36,16 +36,25 @@
                                 <rect key="frame" x="16" y="300" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3R5-q4-A91" id="rFw-Oz-QzZ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Content Stream URL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qM8-tS-QTf">
                                 <rect key="frame" x="16" y="342" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3R5-q4-A91" id="CeY-k0-dJz"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ad Tag URL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKE-2x-9J0">
                                 <rect key="frame" x="16" y="384" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3R5-q4-A91" id="e6G-Mz-E0U"/>
+                                </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6iH-P6-NUm">
                                 <rect key="frame" x="16" y="426" width="343" height="32"/>
@@ -53,6 +62,9 @@
                                     <segment title="VAST"/>
                                     <segment title="Google IMA"/>
                                 </segments>
+                                <connections>
+                                    <action selector="adClientValueChanged:" destination="3R5-q4-A91" eventType="valueChanged" id="zeF-Ta-vPs"/>
+                                </connections>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PtC-Ve-cXC">
                                 <rect key="frame" x="16" y="465" width="343" height="145"/>
@@ -61,6 +73,9 @@
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3R5-q4-A91" id="bI3-6p-sNn"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,7 +106,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="JWP iOS SDK Ad Tester" id="o2c-dP-3X1"/>
                     <connections>
+                        <outlet property="adClientControl" destination="6iH-P6-NUm" id="21O-Ep-RCc"/>
+                        <outlet property="adTagURLField" destination="JKE-2x-9J0" id="7es-ak-SHP"/>
+                        <outlet property="conoleOutputView" destination="PtC-Ve-cXC" id="QuK-tk-gek"/>
+                        <outlet property="contentURLField" destination="qM8-tS-QTf" id="2zH-t7-gOf"/>
+                        <outlet property="licenseKeyField" destination="Fe1-la-Gy0" id="FV5-pU-SAB"/>
                         <outlet property="playerContainerView" destination="G80-jc-hXW" id="NkA-XA-6c6"/>
+                        <outlet property="versionLabel" destination="HCk-oc-uXA" id="3DD-Vn-JGZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qJ-iy-hPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
