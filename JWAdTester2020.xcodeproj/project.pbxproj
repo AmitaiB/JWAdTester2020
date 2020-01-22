@@ -37,9 +37,10 @@
 		118E8ECC22259B43006D0685 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		118E8ED82225BE4E006D0685 /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
 		118E8ED92225BE4E006D0685 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
+		11E097AC23D8F63B0003315A /* JWAdTester2020.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JWAdTester2020.entitlements; sourceTree = "<group>"; };
 		11F4F398234B894C00A307F7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3889425D22A4D6B50015DCBB /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
-		6A7D08EE1A5DAFD600C4E749 /* JWAdTester2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWAdTester2020.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7D08EE1A5DAFD600C4E749 /* JWAdTester2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWAdTester2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7D08F21A5DAFD600C4E749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A7D08F31A5DAFD600C4E749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 		6A7D08F01A5DAFD600C4E749 /* JWAdTester2020 */ = {
 			isa = PBXGroup;
 			children = (
+				11E097AC23D8F63B0003315A /* JWAdTester2020.entitlements */,
 				6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */,
 				6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */,
 				6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */,
@@ -105,7 +107,7 @@
 				6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */,
 				6A7D08F31A5DAFD600C4E749 /* main.m */,
 			);
-			path = "JWAdTester2020";
+			path = JWAdTester2020;
 			sourceTree = "<group>";
 		};
 		9769E5CB1DA8034E00BEF7FF /* Frameworks */ = {
@@ -132,8 +134,8 @@
 			);
 			dependencies = (
 			);
-			name = "JWAdTester2020";
-			productName = "JWAdTester2020";
+			name = JWAdTester2020;
+			productName = JWAdTester2020;
 			productReference = 6A7D08EE1A5DAFD600C4E749 /* JWAdTester2020.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -150,7 +152,7 @@
 				TargetAttributes = {
 					6A7D08ED1A5DAFD600C4E749 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = WX87M56X5N;
+						DevelopmentTeam = 8VC65F749H;
 						LastSwiftMigration = 1020;
 					};
 				};
@@ -325,9 +327,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = JWAdTester2020/JWAdTester2020.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WX87M56X5N;
+				DEVELOPMENT_TEAM = 8VC65F749H;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,12 +339,13 @@
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				IBSC_WARNINGS = YES;
-				INFOPLIST_FILE = "JWAdTester2020/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = JWAdTester2020/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "JWAdTester2020";
+				PRODUCT_NAME = JWAdTester2020;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWAdTester2020/JWAdTester2020-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -356,9 +360,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = JWAdTester2020/JWAdTester2020.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WX87M56X5N;
+				DEVELOPMENT_TEAM = 8VC65F749H;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,12 +372,13 @@
 				);
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				IBSC_WARNINGS = YES;
-				INFOPLIST_FILE = "JWAdTester2020/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = JWAdTester2020/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "JWAdTester2020";
+				PRODUCT_NAME = JWAdTester2020;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWAdTester2020/JWAdTester2020-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
