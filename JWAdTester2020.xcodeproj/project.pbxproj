@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ECC22259B43006D0685 /* SwiftViewController.swift */; };
-		118E8EDA2225BE4E006D0685 /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ED92225BE4E006D0685 /* ObjCViewController.m */; };
 		11C8120A223ADDF400222E98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */; };
+		11E097AE23D8F9BD0003315A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E097AD23D8F9BD0003315A /* UIView+Extensions.swift */; };
 		11F4F399234B894C00A307F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F4F398234B894C00A307F7 /* LaunchScreen.storyboard */; };
 		3889425F22A4D6BE0015DCBB /* JWPlayer_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3889425D22A4D6B50015DCBB /* JWPlayer_iOS_SDK.framework */; };
 		3889426022A4D6BE0015DCBB /* JWPlayer_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3889425D22A4D6B50015DCBB /* JWPlayer_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A7D08F41A5DAFD600C4E749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F31A5DAFD600C4E749 /* main.m */; };
 		6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */; };
-		6A7D08FA1A5DAFD600C4E749 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F91A5DAFD600C4E749 /* InitialViewController.m */; };
 		6A7D08FD1A5DAFD600C4E749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +34,8 @@
 
 /* Begin PBXFileReference section */
 		118E8ECC22259B43006D0685 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
-		118E8ED82225BE4E006D0685 /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
-		118E8ED92225BE4E006D0685 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 		11E097AC23D8F63B0003315A /* JWAdTester2020.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JWAdTester2020.entitlements; sourceTree = "<group>"; };
+		11E097AD23D8F9BD0003315A /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		11F4F398234B894C00A307F7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3889425D22A4D6B50015DCBB /* JWPlayer_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JWPlayer_iOS_SDK.framework; sourceTree = "<group>"; };
 		6A7D08EE1A5DAFD600C4E749 /* JWAdTester2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWAdTester2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,8 +43,6 @@
 		6A7D08F31A5DAFD600C4E749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6A7D08F81A5DAFD600C4E749 /* InitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
-		6A7D08F91A5DAFD600C4E749 /* InitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		6A7D08FC1A5DAFD600C4E749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8AEA39F61AFAAE22008A8C8A /* JWAdTester2020-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JWAdTester2020-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -64,18 +60,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11905860222DBAFC0058D653 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				6A7D08F81A5DAFD600C4E749 /* InitialViewController.h */,
-				6A7D08F91A5DAFD600C4E749 /* InitialViewController.m */,
-				118E8ECC22259B43006D0685 /* SwiftViewController.swift */,
-				118E8ED82225BE4E006D0685 /* ObjCViewController.h */,
-				118E8ED92225BE4E006D0685 /* ObjCViewController.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		6A7D08E51A5DAFD600C4E749 = {
 			isa = PBXGroup;
 			children = (
@@ -96,13 +80,14 @@
 		6A7D08F01A5DAFD600C4E749 /* JWAdTester2020 */ = {
 			isa = PBXGroup;
 			children = (
+				118E8ECC22259B43006D0685 /* SwiftViewController.swift */,
+				11E097AD23D8F9BD0003315A /* UIView+Extensions.swift */,
 				11E097AC23D8F63B0003315A /* JWAdTester2020.entitlements */,
 				6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */,
 				6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */,
 				6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */,
 				8AEA39F61AFAAE22008A8C8A /* JWAdTester2020-Bridging-Header.h */,
 				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
-				11905860222DBAFC0058D653 /* Controllers */,
 				11F4F398234B894C00A307F7 /* LaunchScreen.storyboard */,
 				6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */,
 				6A7D08F31A5DAFD600C4E749 /* main.m */,
@@ -193,10 +178,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				118E8EDA2225BE4E006D0685 /* ObjCViewController.m in Sources */,
 				118E8ECD22259B43006D0685 /* SwiftViewController.swift in Sources */,
-				6A7D08FA1A5DAFD600C4E749 /* InitialViewController.m in Sources */,
 				6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */,
+				11E097AE23D8F9BD0003315A /* UIView+Extensions.swift in Sources */,
 				6A7D08F41A5DAFD600C4E749 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
