@@ -10,7 +10,7 @@
         <!--JWP iOS SDK Ad Tester-->
         <scene sceneID="z1b-58-COU">
             <objects>
-                <viewController id="3R5-q4-A91" customClass="SwiftViewController" customModule="JWAdTester2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3R5-q4-A91" customClass="MainViewController" customModule="JWAdTester2020" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GN2-cC-hbF"/>
                         <viewControllerLayoutGuide type="bottom" id="PFu-SZ-bdI"/>

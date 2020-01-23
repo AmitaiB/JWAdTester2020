@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwiftViewController: UIViewController {
+class MainViewController: UIViewController {
     @IBOutlet weak var playerContainerView: UIView!
     var player: JWPlayerController?
     var config = JWConfig()
@@ -43,6 +43,7 @@ class SwiftViewController: UIViewController {
         }
     }
     
+    // build config and create player
     @IBAction func applyButtonTapped(_ sender: Any) {
         guard config.isValid else { return }
         config.advertising = adConfig.isValid ? adConfig : nil
@@ -56,12 +57,14 @@ class SwiftViewController: UIViewController {
     }
 }
 
+// for console output
 // MARK: delegate methods
-extension SwiftViewController: JWPlayerDelegate {
+extension MainViewController: JWPlayerDelegate {
     
 }
 
-extension SwiftViewController: UITextFieldDelegate {
+// for jwconfig builder pattern
+extension MainViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         let textInput = textField.text ?? ""
         
@@ -78,10 +81,10 @@ extension SwiftViewController: UITextFieldDelegate {
     }
 }
 
-extension SwiftViewController: UITextViewDelegate {
+// For console output
+extension MainViewController: UITextViewDelegate {
     
 }
-
 
 enum AdClient: Int, CaseIterable {
     case vast, googima
