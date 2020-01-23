@@ -29,11 +29,6 @@ class SwiftViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         versionLabel.text?.append(" \(JWPlayerController.sdkVersion())")
-        
-//        if let playerView = player?.view {
-//            playerContainerView.addSubview(playerView)
-//            playerView.constrainToSuperview()
-//        }
     }
     
     @IBAction func adClientValueChanged(_ sender: UISegmentedControl) {
@@ -47,10 +42,22 @@ class SwiftViewController: UIViewController {
                adConfig.client  = .googima
         }
     }
+    
+    @IBAction func applyButtonTapped(_ sender: Any) {
+        guard config.isValid else { return }
+        config.advertising = adConfig.isValid ? adConfig : nil
+
+        player = JWPlayerController(config: config, delegate: self)
+
+        if let playerView = player?.view {
+            playerContainerView.addSubview(playerView)
+            playerView.constrainToSuperview()
+        }
+    }
 }
 
-// MARK: Helper methods
-extension SwiftViewController {
+// MARK: delegate methods
+extension SwiftViewController: JWPlayerDelegate {
     
 }
 
