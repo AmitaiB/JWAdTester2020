@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+// MARK: Validatable
+protocol Validatable {
+    var isValid: Bool { get }
+}
+
+extension Validatable {
+    var isValid: Bool { true }
+}
+
+
+// MARK: JWValidatable
+extension JWConfig: Validatable {
+    var isValid: Bool { file?.isValidURL ?? false }
+}
+
+// if exists and is non-empty, true
+extension JWAdConfig: Validatable {
+    var isValid: Bool { schedule?.isEmpty == false }
+}
