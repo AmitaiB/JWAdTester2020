@@ -79,8 +79,3 @@ extension SwiftViewController: UITextViewDelegate {
 enum AdClient: Int, CaseIterable {
     case vast, googima
 }
-
-extension String {
-    static var pre : String {"pre" }
-    static var post: String {"post"}
-}
