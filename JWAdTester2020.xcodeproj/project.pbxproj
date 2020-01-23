@@ -66,6 +66,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11E097B623DA63A20003315A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11E097AD23D8F9BD0003315A /* UIKit+Extensions.swift */,
+				11E097B323D91FDE0003315A /* Foundation+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11E097B723DA63B00003315A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				11E097B123D91FA40003315A /* Validatable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		11E097B823DA63BC0003315A /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				11E097AF23D9197E0003315A /* RoundedButton.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
 		6A7D08E51A5DAFD600C4E749 = {
 			isa = PBXGroup;
 			children = (
@@ -87,10 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				118E8ECC22259B43006D0685 /* SwiftViewController.swift */,
-				11E097AD23D8F9BD0003315A /* UIKit+Extensions.swift */,
-				11E097B323D91FDE0003315A /* Foundation+Extensions.swift */,
-				11E097AF23D9197E0003315A /* RoundedButton.swift */,
-				11E097B123D91FA40003315A /* Validatable.swift */,
+				11E097B623DA63A20003315A /* Extensions */,
+				11E097B823DA63BC0003315A /* UI Elements */,
+				11E097B723DA63B00003315A /* Protocols */,
 				11E097AC23D8F63B0003315A /* JWAdTester2020.entitlements */,
 				6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */,
 				6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */,
