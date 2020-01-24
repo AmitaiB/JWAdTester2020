@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class MainViewController: UIViewController {
     @IBOutlet weak var playerContainerView: UIView!
@@ -24,6 +25,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         config = JWConfig()
+        IQKeyboardManager.shared.enable = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
