@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        versionLabel.text?.append(" \(JWPlayerController.sdkVersion())")
+            versionLabel.text?.append(" \(JWPlayerController.sdkVersion())")
     }
     
     @IBAction func adClientValueChanged(_ sender: UISegmentedControl) {
@@ -57,13 +57,31 @@ class MainViewController: UIViewController {
     }
 }
 
+extension MainViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let qrScannerVC = segue.destination as? QRScannerViewController {
+            qrScannerVC.delegate = self
+        }
+    }
+}
+
 // for console output
-// MARK: delegate methods
+// MARK: QRScannerDelegate
+extension MainViewController: QRScannerDelegate {
+    func didGetString(_ string: String) {
+        UIPasteboard.general.string = string
+        print("\(string) copied to pasteboard!")
+    }
+}
+
+// MARK: JWPlayerDelegate
 extension MainViewController: JWPlayerDelegate {
     
 }
 
 // for jwconfig builder pattern
+// MARK: UITextFieldDelegate
 extension MainViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         let textInput = textField.text ?? ""
@@ -82,6 +100,7 @@ extension MainViewController: UITextFieldDelegate {
 }
 
 // For console output
+// MARK: UITextViewDelegate
 extension MainViewController: UITextViewDelegate {
     
 }

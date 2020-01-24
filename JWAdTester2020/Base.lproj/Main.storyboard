@@ -77,7 +77,7 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-sn-Llu" customClass="RoundedButton" customModule="JWAdTester2020" customModuleProvider="target">
-                                <rect key="frame" x="16" y="580" width="343" height="30"/>
+                                <rect key="frame" x="16" y="580" width="167.5" height="30"/>
                                 <color key="backgroundColor" red="0.92549019607843142" green="0.0" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="0.84705882352941175" green="0.8666666666666667" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
@@ -91,10 +91,28 @@
                                     <action selector="applyButtonTapped:" destination="3R5-q4-A91" eventType="touchUpInside" id="q4v-Bc-xqT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXF-4g-PuE" customClass="RoundedButton" customModule="JWAdTester2020" customModuleProvider="target">
+                                <rect key="frame" x="191.5" y="580" width="167.5" height="30"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.84705882349999995" green="0.86666666670000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="QR"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="mZl-1P-lx0" kind="presentation" id="zVl-PE-QqS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="qM8-tS-QTf" secondAttribute="trailing" id="2ul-jx-092"/>
+                            <constraint firstItem="LXF-4g-PuE" firstAttribute="width" secondItem="GbS-sn-Llu" secondAttribute="width" id="32e-iO-aSC"/>
+                            <constraint firstItem="LXF-4g-PuE" firstAttribute="leading" secondItem="GbS-sn-Llu" secondAttribute="trailing" constant="8" symbolic="YES" id="3tT-wB-bJt"/>
+                            <constraint firstItem="LXF-4g-PuE" firstAttribute="bottom" secondItem="GbS-sn-Llu" secondAttribute="bottom" id="48H-6N-rEe"/>
                             <constraint firstItem="G80-jc-hXW" firstAttribute="centerX" secondItem="XjH-py-Cd0" secondAttribute="centerX" id="9ZA-am-m9D"/>
                             <constraint firstItem="PtC-Ve-cXC" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="C5d-4c-af8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6iH-P6-NUm" secondAttribute="trailing" id="Cjd-2i-vt6"/>
@@ -103,17 +121,18 @@
                             <constraint firstItem="GbS-sn-Llu" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="KkV-g3-2W4"/>
                             <constraint firstItem="6iH-P6-NUm" firstAttribute="top" secondItem="JKE-2x-9J0" secondAttribute="bottom" constant="8" symbolic="YES" id="Ok6-AS-0gH"/>
                             <constraint firstItem="HCk-oc-uXA" firstAttribute="top" secondItem="GN2-cC-hbF" secondAttribute="bottom" constant="8" id="QLT-Cc-FN0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GbS-sn-Llu" secondAttribute="trailing" id="QX2-Lh-Rn0"/>
                             <constraint firstItem="JKE-2x-9J0" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="Rk5-tb-085"/>
                             <constraint firstItem="qM8-tS-QTf" firstAttribute="top" secondItem="Fe1-la-Gy0" secondAttribute="bottom" constant="8" symbolic="YES" id="Rzc-P1-r6x"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PtC-Ve-cXC" secondAttribute="trailing" id="Tfj-Dl-NF8"/>
                             <constraint firstItem="PtC-Ve-cXC" firstAttribute="top" secondItem="6iH-P6-NUm" secondAttribute="bottom" constant="8" symbolic="YES" id="Vea-DD-MaF"/>
                             <constraint firstItem="JKE-2x-9J0" firstAttribute="top" secondItem="qM8-tS-QTf" secondAttribute="bottom" constant="8" symbolic="YES" id="Xey-GK-LYB"/>
                             <constraint firstItem="Fe1-la-Gy0" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="YCT-f6-1WN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LXF-4g-PuE" secondAttribute="trailing" id="aue-PJ-VlB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HCk-oc-uXA" secondAttribute="trailing" id="coi-bS-EwX"/>
                             <constraint firstItem="G80-jc-hXW" firstAttribute="top" secondItem="HCk-oc-uXA" secondAttribute="bottom" constant="8" symbolic="YES" id="ezx-z3-BL0"/>
                             <constraint firstItem="G80-jc-hXW" firstAttribute="width" secondItem="XjH-py-Cd0" secondAttribute="width" id="hGw-Jt-zB3"/>
                             <constraint firstItem="HCk-oc-uXA" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="hNR-YD-uvn"/>
+                            <constraint firstItem="LXF-4g-PuE" firstAttribute="top" secondItem="GbS-sn-Llu" secondAttribute="top" id="iLa-9D-OYa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JKE-2x-9J0" secondAttribute="trailing" id="pho-Hn-W2R"/>
                             <constraint firstItem="6iH-P6-NUm" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="tDh-3k-Iwh"/>
                             <constraint firstItem="Fe1-la-Gy0" firstAttribute="top" secondItem="G80-jc-hXW" secondAttribute="bottom" constant="8" symbolic="YES" id="uqO-ki-Igc"/>
@@ -153,6 +172,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02x-hW-Htu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="526" y="-169"/>
+        </scene>
+        <!--Scanner View Controller-->
+        <scene sceneID="qYN-TX-ofB">
+            <objects>
+                <viewController id="mZl-1P-lx0" customClass="QRScannerViewController" customModule="JWAdTester2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xVy-S5-EGl"/>
+                        <viewControllerLayoutGuide type="bottom" id="fCg-t8-TSw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N3e-hl-gFp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="28k-Iy-Xhn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Og-kV-Ynf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="-170"/>
         </scene>
     </scenes>
 </document>

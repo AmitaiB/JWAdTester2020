@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		118E8ECD22259B43006D0685 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ECC22259B43006D0685 /* MainViewController.swift */; };
+		11C7029323DB56F500456F3D /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7029223DB56F500456F3D /* QRScannerViewController.swift */; };
 		11C8120A223ADDF400222E98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */; };
 		11E097AE23D8F9BD0003315A /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E097AD23D8F9BD0003315A /* UIKit+Extensions.swift */; };
 		11E097B023D9197E0003315A /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E097AF23D9197E0003315A /* RoundedButton.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		118E8ECC22259B43006D0685 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		11C7029223DB56F500456F3D /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		11E097AC23D8F63B0003315A /* JWAdTester2020.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JWAdTester2020.entitlements; sourceTree = "<group>"; };
 		11E097AD23D8F9BD0003315A /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		11E097AF23D9197E0003315A /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				118E8ECC22259B43006D0685 /* MainViewController.swift */,
+				11C7029223DB56F500456F3D /* QRScannerViewController.swift */,
 				11E097B623DA63A20003315A /* Extensions */,
 				11E097B823DA63BC0003315A /* UI Elements */,
 				11E097B723DA63B00003315A /* Protocols */,
@@ -215,6 +218,7 @@
 				11E097B223D91FA40003315A /* Validatable.swift in Sources */,
 				11E097B023D9197E0003315A /* RoundedButton.swift in Sources */,
 				6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */,
+				11C7029323DB56F500456F3D /* QRScannerViewController.swift in Sources */,
 				11E097B423D91FDE0003315A /* Foundation+Extensions.swift in Sources */,
 				11E097AE23D8F9BD0003315A /* UIKit+Extensions.swift in Sources */,
 				6A7D08F41A5DAFD600C4E749 /* main.m in Sources */,
@@ -281,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -330,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -360,7 +364,7 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = JWAdTester2020/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1;
 				OTHER_LDFLAGS = "-ObjC";
@@ -393,7 +397,7 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = JWAdTester2020/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1;
 				OTHER_LDFLAGS = "-ObjC";
