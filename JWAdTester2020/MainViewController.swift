@@ -30,6 +30,14 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
             versionLabel.text?.append(" \(JWPlayerController.sdkVersion())")
+        
+        if
+            let mementoData = groupDefaults?.object(forKey: kMementoKey) as? Data,
+            let memento = try? JSONDecoder().decode(PlayerConfigMemento.self, from: mementoData)
+        {
+            
+            apply(memento: memento)
+        }
     }
     
     @IBAction func adClientValueChanged(_ sender: UISegmentedControl) {
@@ -56,11 +64,13 @@ class MainViewController: UIViewController {
             playerView.constrainToSuperview()
         }
     }
+    
+    var groupDefaults: UserDefaults? { UserDefaults(suiteName: "group.com.jwplayer.JWAdTester2020") }
+    var kMementoKey: String {"mementoKey"}
 }
 
 extension MainViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let qrScannerVC = segue.destination as? QRScannerViewController {
             qrScannerVC.delegate = self
         }
@@ -68,17 +78,17 @@ extension MainViewController {
 }
 
 // for console output
+// MARK: JWPlayerDelegate
+extension MainViewController: JWPlayerDelegate {
+    
+}
+
 // MARK: QRScannerDelegate
 extension MainViewController: QRScannerDelegate {
     func didGetString(_ string: String) {
         UIPasteboard.general.string = string
         print("\(string) copied to pasteboard!")
     }
-}
-
-// MARK: JWPlayerDelegate
-extension MainViewController: JWPlayerDelegate {
-    
 }
 
 // for jwconfig builder pattern
@@ -97,6 +107,9 @@ extension MainViewController: UITextFieldDelegate {
             default:
             break
         }
+        
+        let data = try? JSONEncoder().encode(memento)
+        groupDefaults?.set(data, forKey: kMementoKey)
     }
 }
 
@@ -130,3 +143,5 @@ extension MainViewController: PlayerConfigMementoConvertible {
 enum AdClient: Int, CaseIterable {
     case vast, googima
 }
+
+// IMPLEMENT SAVING TO GROUP CONTAINER< ADN RETRIEVING FROM SAID CONTAINER

@@ -74,6 +74,7 @@
 			children = (
 				11E097AD23D8F9BD0003315A /* UIKit+Extensions.swift */,
 				11E097B323D91FDE0003315A /* Foundation+Extensions.swift */,
+				11C7029823DE296F00456F3D /* OptionalExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -82,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				11E097B123D91FA40003315A /* Validatable.swift */,
+				11C7029423DB7B2500456F3D /* Memento.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -279,6 +281,7 @@
 				11E097B023D9197E0003315A /* RoundedButton.swift in Sources */,
 				11C7029323DB56F500456F3D /* QRScannerViewController.swift in Sources */,
 				11E097B423D91FDE0003315A /* Foundation+Extensions.swift in Sources */,
+				11C7029523DB7B2500456F3D /* Memento.swift in Sources */,
 				11E097AE23D8F9BD0003315A /* UIKit+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
