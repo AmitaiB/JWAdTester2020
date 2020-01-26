@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		118E8ECD22259B43006D0685 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ECC22259B43006D0685 /* MainViewController.swift */; };
 		11C7029323DB56F500456F3D /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7029223DB56F500456F3D /* QRScannerViewController.swift */; };
+		11C7029523DB7B2500456F3D /* Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7029423DB7B2500456F3D /* Memento.swift */; };
+		11C7029923DE296F00456F3D /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7029823DE296F00456F3D /* OptionalExtensions.swift */; };
+		11C7029B23DE520800456F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7029A23DE520800456F3D /* AppDelegate.swift */; };
 		11C8120A223ADDF400222E98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */; };
 		11E097AE23D8F9BD0003315A /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E097AD23D8F9BD0003315A /* UIKit+Extensions.swift */; };
 		11E097B023D9197E0003315A /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E097AF23D9197E0003315A /* RoundedButton.swift */; };
 		11E097B223D91FA40003315A /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E097B123D91FA40003315A /* Validatable.swift */; };
 		11E097B423D91FDE0003315A /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E097B323D91FDE0003315A /* Foundation+Extensions.swift */; };
 		11F4F399234B894C00A307F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F4F398234B894C00A307F7 /* LaunchScreen.storyboard */; };
-		6A7D08F41A5DAFD600C4E749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F31A5DAFD600C4E749 /* main.m */; };
-		6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */; };
 		6A7D08FD1A5DAFD600C4E749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */; };
 		FB4565D645C4DF0F6801E26C /* Pods_JWAdTester2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4879D7D39B3C744849DFDE22 /* Pods_JWAdTester2020.framework */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,9 @@
 /* Begin PBXFileReference section */
 		118E8ECC22259B43006D0685 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		11C7029223DB56F500456F3D /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		11C7029423DB7B2500456F3D /* Memento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memento.swift; sourceTree = "<group>"; };
+		11C7029823DE296F00456F3D /* OptionalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
+		11C7029A23DE520800456F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11E097AC23D8F63B0003315A /* JWAdTester2020.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JWAdTester2020.entitlements; sourceTree = "<group>"; };
 		11E097AD23D8F9BD0003315A /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		11E097AF23D9197E0003315A /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -47,9 +51,6 @@
 		61275C3FAD64FFCD016344E4 /* Pods-JWAdTester2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAdTester2020.debug.xcconfig"; path = "Target Support Files/Pods-JWAdTester2020/Pods-JWAdTester2020.debug.xcconfig"; sourceTree = "<group>"; };
 		6A7D08EE1A5DAFD600C4E749 /* JWAdTester2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWAdTester2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7D08F21A5DAFD600C4E749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A7D08F31A5DAFD600C4E749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6A7D08FC1A5DAFD600C4E749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7888AC883B78E19488F80DC9 /* Pods-JWAdTester2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAdTester2020.release.xcconfig"; path = "Target Support Files/Pods-JWAdTester2020/Pods-JWAdTester2020.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,13 +122,11 @@
 				11E097B723DA63B00003315A /* Protocols */,
 				11E097AC23D8F63B0003315A /* JWAdTester2020.entitlements */,
 				6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */,
-				6A7D08F51A5DAFD600C4E749 /* AppDelegate.h */,
-				6A7D08F61A5DAFD600C4E749 /* AppDelegate.m */,
+				11C7029A23DE520800456F3D /* AppDelegate.swift */,
 				8AEA39F61AFAAE22008A8C8A /* JWAdTester2020-Bridging-Header.h */,
 				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
 				11F4F398234B894C00A307F7 /* LaunchScreen.storyboard */,
 				6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */,
-				6A7D08F31A5DAFD600C4E749 /* main.m */,
 			);
 			path = JWAdTester2020;
 			sourceTree = "<group>";
@@ -275,12 +274,12 @@
 			files = (
 				118E8ECD22259B43006D0685 /* MainViewController.swift in Sources */,
 				11E097B223D91FA40003315A /* Validatable.swift in Sources */,
+				11C7029923DE296F00456F3D /* OptionalExtensions.swift in Sources */,
+				11C7029B23DE520800456F3D /* AppDelegate.swift in Sources */,
 				11E097B023D9197E0003315A /* RoundedButton.swift in Sources */,
-				6A7D08F71A5DAFD600C4E749 /* AppDelegate.m in Sources */,
 				11C7029323DB56F500456F3D /* QRScannerViewController.swift in Sources */,
 				11E097B423D91FDE0003315A /* Foundation+Extensions.swift in Sources */,
 				11E097AE23D8F9BD0003315A /* UIKit+Extensions.swift in Sources */,
-				6A7D08F41A5DAFD600C4E749 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

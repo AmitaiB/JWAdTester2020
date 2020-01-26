@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import IQKeyboardManagerSwift
 
 class MainViewController: UIViewController {
     @IBOutlet weak var playerContainerView: UIView!
     var player: JWPlayerController?
-    var config = JWConfig()
-    var adConfig = JWAdConfig()
+    private var config   = JWConfig()
+    private var adConfig = JWAdConfig()
     
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var licenseKeyField: UITextField!
@@ -25,7 +24,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         config = JWConfig()
-        IQKeyboardManager.shared.enable = true
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -106,6 +105,27 @@ extension MainViewController: UITextFieldDelegate {
 extension MainViewController: UITextViewDelegate {
     
 }
+
+// MARK: State Saving and Restoring
+extension MainViewController: PlayerConfigMementoConvertible {
+    // Store in Group Container when any field is updated
+    var memento: PlayerConfigMemento {
+        PlayerConfigMemento(key: licenseKeyField.text,
+                            contentURL: contentURLField.text,
+                            adTagURL: adTagURLField.text,
+                            isGoogima: adClientControl.selectedSegmentIndex == 1)
+    }
+        
+    func apply(memento: PlayerConfigMemento?) {
+        guard let memento = memento else { return }
+        
+        memento        .key.ifSome { licenseKeyField.text = $0 }
+        memento .contentURL.ifSome { contentURLField.text = $0 }
+        memento   .adTagURL.ifSome { adTagURLField.text = $0 }
+        adConfig.client = memento.isGoogima ? .googima : .vast
+    }
+}
+
 
 enum AdClient: Int, CaseIterable {
     case vast, googima
