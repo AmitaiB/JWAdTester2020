@@ -35,7 +35,6 @@ class MainViewController: UIViewController {
             let mementoData = groupDefaults?.object(forKey: kMementoKey) as? Data,
             let memento = try? JSONDecoder().decode(PlayerConfigMemento.self, from: mementoData)
         {
-            
             apply(memento: memento)
         }
     }
