@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
 
 class MainViewController: UIViewController {
     @IBOutlet weak var playerContainerView: UIView!
@@ -15,9 +16,9 @@ class MainViewController: UIViewController {
     private var adConfig = JWAdConfig()
     
     @IBOutlet weak var versionLabel: UILabel!
-    @IBOutlet weak var licenseKeyField: UITextField!
-    @IBOutlet weak var contentURLField: UITextField!
-    @IBOutlet weak var adTagURLField: UITextField!
+    @IBOutlet weak var licenseKeyField: SkyFloatingLabelTextField!
+    @IBOutlet weak var contentURLField: SkyFloatingLabelTextField!
+    @IBOutlet weak var adTagURLField: SkyFloatingLabelTextField!
     @IBOutlet weak var adClientControl: UISegmentedControl!
     @IBOutlet weak var conoleOutputView: UITextView!
     
@@ -27,14 +28,9 @@ class MainViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-            versionLabel.text?.append(" \(JWPlayerController.sdkVersion())")
-        
-        if
-            let mementoData = groupDefaults?.object(forKey: kMementoKey) as? Data,
-            let memento = try? JSONDecoder().decode(PlayerConfigMemento.self, from: mementoData)
-        {
-            apply(memento: memento)
-        }
+        applyTheme()
+        versionLabel.text?.append(" \(JWPlayerController.sdkVersion())")
+        syncToDefaults()
     }
     
     @IBAction func adClientValueChanged(_ sender: UISegmentedControl) {
@@ -62,8 +58,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    var groupDefaults: UserDefaults? { UserDefaults(suiteName: "group.com.jwplayer.JWAdTester2020") }
-    var kMementoKey: String {"mementoKey"}
+    var groupDefaults: UserDefaults? { UserDefaults(suiteName: L10n.groupComJwplayerJWAdTester2020) }
 }
 
 extension MainViewController {
@@ -99,10 +94,42 @@ extension MainViewController: UITextFieldDelegate {
             break
         }
         
-        let data = try? JSONEncoder().encode(memento)
-        groupDefaults?.set(data, forKey: kMementoKey)
+        saveToDefaults(memento)
+    }
+    
+    /// Save current values to the app groupd defaults.
+    func saveToDefaults(_ memento: PlayerConfigMemento) {
+        do {
+            let data = try JSONEncoder().encode(memento)
+            groupDefaults?.set(data, forKey: L10n.mementoKey)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    /// Conform the current UI to those saved in the app group defaults.
+    func syncToDefaults() {
+        do {
+            if let mementoData = groupDefaults?.object(forKey: L10n.mementoKey) as? Data {
+                let memento = try JSONDecoder().decode(PlayerConfigMemento.self, from: mementoData)
+                apply(memento: memento)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func applyTheme() {
+        [licenseKeyField, contentURLField, adTagURLField].forEach {
+            $0?.lineColor          = ColorName.abyss.color
+            $0?.titleColor         = ColorName.fog.color
+            $0?.selectedTitleColor = ColorName.fogDark.color
+        }
+        
+        adClientControl.tintColor = ColorName.dahlia.color
     }
 }
+        
 
 // For console output
 // MARK: UITextViewDelegate

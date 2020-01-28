@@ -36,6 +36,11 @@
                                 <rect key="frame" x="16" y="300" width="343" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="JWP iOS SDK License Key"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="License Key"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="License Key"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="3R5-q4-A91" id="rFw-Oz-QzZ"/>
                                 </connections>
@@ -44,6 +49,10 @@
                                 <rect key="frame" x="16" y="347" width="343" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Content URL"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Content URL"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="3R5-q4-A91" id="CeY-k0-dJz"/>
                                 </connections>
@@ -52,6 +61,11 @@
                                 <rect key="frame" x="16" y="394" width="343" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Ad Tag URL"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Ad Tag"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ad Tag"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="3R5-q4-A91" id="e6G-Mz-E0U"/>
                                 </connections>
