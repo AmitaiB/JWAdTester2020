@@ -1,0 +1,19 @@
+input_dir: JWAdTester2020
+output_dir: JWAdTester2020
+colors:
+  inputs: SwiftGenFiles/Resources/colors.txt
+  outputs:
+    templateName: swift4
+    output: SwiftGenFiles/Generated/Colors.swift
+
+strings:
+    inputs: SwiftGenFiles/Resources/localizable.strings
+    outputs:
+        - templateName: flat-swift4
+          output: SwiftGenFiles/Generated/L10n-Constants.swift
+
+fonts:
+  inputs:  SwiftGenFiles/Resources
+  outputs:
+    templateName: swift4
+    output: SwiftGenFiles/Generated/Fonts.swift

@@ -1,0 +1,28 @@
+/* 
+  localizable.strings
+  JWAdTester2020
+
+  Created by Amitai Blickstein on 1/26/20.
+  Copyright © 2020 JWPlayer. All rights reserved.
+*/
+
+dahlia: #ec0041;
+dahlia-fade: #fbccd9;
+dahlia-alpha-fade: #a6a6a6;
+dahlia-dark: #bd0034;
+dahlia-darker: #a5002e;
+fog: #d8dde6;
+fog-fade: #f3f5f8;
+fog-alpha-fade: #2e3848;
+fog-dark: #a0acc2;
+fog-darker: #8797b2;
+midnight: #475470;
+midnight-fade: #dadde2;
+midnight-alpha-fade: #2b3404;
+midnight-dark: #39435a;
+midnight-darker: #323b4e;
+abyss: #2f3542;
+abyss-fade: #d5d7d9;
+abyss-alpha-fade: #d6c27a;
+abyss-dark: #262a35;
+abyss-darker: #21252e;

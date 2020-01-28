@@ -1,0 +1,11 @@
+/* 
+  localizable.strings
+  JWAdTester2020
+
+  Created by Amitai Blickstein on 1/27/20.
+  Copyright © 2020 JWPlayer. All rights reserved.
+*/
+
+"MementoKey" = "MementoKey";
+"SelectedThemeKey" = "SelectedThemeKey";
+"group.com.jwplayer.JWAdTester2020" = "group.com.jwplayer.JWAdTester2020";

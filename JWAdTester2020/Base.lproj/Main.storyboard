@@ -103,7 +103,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="mZl-1P-lx0" kind="presentation" id="zVl-PE-QqS"/>
+                                    <segue destination="mZl-1P-lx0" kind="presentation" identifier="toScannerVCSegue" id="zVl-PE-QqS"/>
                                 </connections>
                             </button>
                         </subviews>
