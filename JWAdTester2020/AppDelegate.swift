@@ -18,4 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        (window?.rootViewController as? MainViewController)?.saveToDefaults()
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        (window?.rootViewController as? MainViewController)?.syncToDefaults()
+    }
 }

@@ -24,6 +24,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        conoleOutputView.isEditable = false
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -47,15 +49,19 @@ class MainViewController: UIViewController {
     
     // build config and create player
     @IBAction func applyButtonTapped(_ sender: Any) {
-        guard config.isValid else { return }
+        guard config.isValid else { print("invalid config"); return }
         config.advertising = adConfig.isValid ? adConfig : nil
-
+        
         player = JWPlayerController(config: config, delegate: self)
 
         if let playerView = player?.view {
             playerContainerView.addSubview(playerView)
             playerView.constrainToSuperview()
         }
+    }
+    
+    @IBAction func consoleDoubleTapped(_ sender: Any) {
+        conoleOutputView.text = ""
     }
     
     var groupDefaults: UserDefaults? { UserDefaults(suiteName: L10n.groupComJwplayerJWAdTester2020) }
@@ -67,6 +73,8 @@ extension MainViewController {
             qrScannerVC.delegate = self
         }
     }
+    
+    
 }
 
 // MARK: QRScannerDelegate
@@ -80,7 +88,8 @@ extension MainViewController: QRScannerDelegate {
 // for jwconfig builder pattern
 // MARK: UITextFieldDelegate
 extension MainViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        
         let textInput = textField.text ?? ""
         
         switch textField {
@@ -94,11 +103,11 @@ extension MainViewController: UITextFieldDelegate {
             break
         }
         
-        saveToDefaults(memento)
+        saveToDefaults()
     }
     
     /// Save current values to the app groupd defaults.
-    func saveToDefaults(_ memento: PlayerConfigMemento) {
+    func saveToDefaults() {
         do {
             let data = try JSONEncoder().encode(memento)
             groupDefaults?.set(data, forKey: L10n.mementoKey)
@@ -150,10 +159,28 @@ extension MainViewController: PlayerConfigMementoConvertible {
     func apply(memento: PlayerConfigMemento?) {
         guard let memento = memento else { return }
         
-        memento        .key.ifSome { licenseKeyField.text = $0 }
-        memento .contentURL.ifSome { contentURLField.text = $0 }
-        memento   .adTagURL.ifSome { adTagURLField.text = $0 }
+        keyUpdated(to: memento.key)
+        contentURLUpdated(to: memento.contentURL)
+        adTagUpdated(to: memento.adTagURL)
         adConfig.client = memento.isGoogima ? .googima : .vast
+    }
+    
+    private func keyUpdated(to newKey: String?) {
+        guard let newKey = newKey else { return }
+        licenseKeyField.text = newKey
+        JWPlayerController.setPlayerKey(newKey)
+    }
+    
+    private func contentURLUpdated(to newURL: String?) {
+        guard let newURL = newURL else { return }
+        contentURLField.text = newURL
+        config.file = newURL
+    }
+    
+    private func adTagUpdated(to newTag: String?) {
+        guard let newTag = newTag else { return }
+        adTagURLField.text = newTag
+        adConfig.schedule = [JWAdBreak(tag: newTag, offset: "pre")]
     }
 }
 
@@ -268,10 +295,10 @@ extension MainViewController: JWPlayerDelegate {
         conoleOutputView.text += #function + "\n"
     }
     
-    func onAdBreakEnd(_ event: JWAdEvent & JWAdBreakEvent) {
-        conoleOutputView.text += #function + "\n"
-    }
-    
+//    func onAdBreakEnd(_ event: JWAdEvent & JWAdBreakEvent) {
+//        conoleOutputView.text += #function + "\n"
+//    }
+//
     func onAdSkipped(_ event: JWAdEvent & JWAdDetailEvent) {
         conoleOutputView.text += #function + "\n"
     }
@@ -296,9 +323,9 @@ extension MainViewController: JWPlayerDelegate {
         conoleOutputView.text += #function + "\n"
     }
     
-    func onAdBreakStart(_ event: JWAdEvent & JWAdBreakEvent) {
-        conoleOutputView.text += #function + "\n"
-    }
+//    func onAdBreakStart(_ event: JWAdEvent & JWAdBreakEvent) {
+//        conoleOutputView.text += #function + "\n"
+//    }
     
     func onAdPlay(_ event: JWAdEvent & JWAdStateChangeEvent) {
         conoleOutputView.text += #function + "\n"

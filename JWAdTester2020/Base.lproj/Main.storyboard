@@ -10,7 +10,7 @@
         <!--JWP iOS SDK Ad Tester-->
         <scene sceneID="z1b-58-COU">
             <objects>
-                <viewController id="3R5-q4-A91" customClass="MainViewController" customModule="JWAdTester2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3R5-q4-A91" customClass="MainViewController" customModule="JWAdTester_3_9" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GN2-cC-hbF"/>
                         <viewControllerLayoutGuide type="bottom" id="PFu-SZ-bdI"/>
@@ -22,9 +22,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G80-jc-hXW">
                                 <rect key="frame" x="0.0" y="81" width="375" height="211"/>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="G80-jc-hXW" secondAttribute="height" multiplier="16:9" id="dDw-WU-scE"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JWP iOS SDK Version: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCk-oc-uXA">
                                 <rect key="frame" x="16" y="52" width="343" height="21"/>
@@ -32,7 +29,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="JWPlayerKey" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fe1-la-Gy0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="JWPlayerKey" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fe1-la-Gy0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="16" y="300" width="343" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -45,8 +42,8 @@
                                     <outlet property="delegate" destination="3R5-q4-A91" id="rFw-Oz-QzZ"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Content Stream URL" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qM8-tS-QTf" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="347" width="343" height="39"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Content Stream URL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qM8-tS-QTf" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="16" y="347" width="343" height="39.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                 <userDefinedRuntimeAttributes>
@@ -57,8 +54,8 @@
                                     <outlet property="delegate" destination="3R5-q4-A91" id="CeY-k0-dJz"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ad Tag URL" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JKE-2x-9J0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="394" width="343" height="39"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ad Tag URL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JKE-2x-9J0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="16" y="394.5" width="343" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                 <userDefinedRuntimeAttributes>
@@ -71,7 +68,7 @@
                                 </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6iH-P6-NUm">
-                                <rect key="frame" x="16" y="441" width="343" height="32"/>
+                                <rect key="frame" x="16" y="441.5" width="343" height="32"/>
                                 <segments>
                                     <segment title="VAST"/>
                                     <segment title="Google IMA"/>
@@ -80,19 +77,27 @@
                                     <action selector="adClientValueChanged:" destination="3R5-q4-A91" eventType="valueChanged" id="zeF-Ta-vPs"/>
                                 </connections>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Console Output..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PtC-Ve-cXC">
-                                <rect key="frame" x="16" y="480" width="343" height="92"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Console Output..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PtC-Ve-cXC">
+                                <rect key="frame" x="16" y="480.5" width="343" height="91.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91.5" id="BCP-Gi-J3z"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="3R5-q4-A91" id="bI3-6p-sNn"/>
+                                    <outletCollection property="gestureRecognizers" destination="XUV-nb-RWI" appends="YES" id="HzD-t6-Y8y"/>
                                 </connections>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-sn-Llu" customClass="RoundedButton" customModule="JWAdTester2020" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-sn-Llu" customClass="RoundedButton" customModule="JWAdTester_3_9" customModuleProvider="target">
                                 <rect key="frame" x="16" y="580" width="167.5" height="30"/>
                                 <color key="backgroundColor" red="0.92549019607843142" green="0.0" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167.5" id="Bp2-wY-aT2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="0.84705882352941175" green="0.8666666666666667" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Apply"/>
@@ -105,7 +110,7 @@
                                     <action selector="applyButtonTapped:" destination="3R5-q4-A91" eventType="touchUpInside" id="q4v-Bc-xqT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXF-4g-PuE" customClass="RoundedButton" customModule="JWAdTester2020" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXF-4g-PuE" customClass="RoundedButton" customModule="JWAdTester_3_9" customModuleProvider="target">
                                 <rect key="frame" x="191.5" y="580" width="167.5" height="30"/>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -123,35 +128,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="qM8-tS-QTf" secondAttribute="trailing" id="2ul-jx-092"/>
-                            <constraint firstItem="LXF-4g-PuE" firstAttribute="width" secondItem="GbS-sn-Llu" secondAttribute="width" id="32e-iO-aSC"/>
-                            <constraint firstItem="LXF-4g-PuE" firstAttribute="leading" secondItem="GbS-sn-Llu" secondAttribute="trailing" constant="8" symbolic="YES" id="3tT-wB-bJt"/>
-                            <constraint firstItem="LXF-4g-PuE" firstAttribute="bottom" secondItem="GbS-sn-Llu" secondAttribute="bottom" id="48H-6N-rEe"/>
-                            <constraint firstItem="G80-jc-hXW" firstAttribute="centerX" secondItem="XjH-py-Cd0" secondAttribute="centerX" id="9ZA-am-m9D"/>
-                            <constraint firstItem="PtC-Ve-cXC" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="C5d-4c-af8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6iH-P6-NUm" secondAttribute="trailing" id="Cjd-2i-vt6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fe1-la-Gy0" secondAttribute="trailing" id="Fg1-9O-2hp"/>
-                            <constraint firstItem="qM8-tS-QTf" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="HWf-lX-afD"/>
-                            <constraint firstItem="GbS-sn-Llu" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="KkV-g3-2W4"/>
-                            <constraint firstItem="6iH-P6-NUm" firstAttribute="top" secondItem="JKE-2x-9J0" secondAttribute="bottom" constant="8" symbolic="YES" id="Ok6-AS-0gH"/>
-                            <constraint firstItem="HCk-oc-uXA" firstAttribute="top" secondItem="GN2-cC-hbF" secondAttribute="bottom" constant="8" id="QLT-Cc-FN0"/>
-                            <constraint firstItem="JKE-2x-9J0" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="Rk5-tb-085"/>
-                            <constraint firstItem="qM8-tS-QTf" firstAttribute="top" secondItem="Fe1-la-Gy0" secondAttribute="bottom" constant="8" symbolic="YES" id="Rzc-P1-r6x"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PtC-Ve-cXC" secondAttribute="trailing" id="Tfj-Dl-NF8"/>
-                            <constraint firstItem="PtC-Ve-cXC" firstAttribute="top" secondItem="6iH-P6-NUm" secondAttribute="bottom" constant="8" symbolic="YES" id="Vea-DD-MaF"/>
-                            <constraint firstItem="JKE-2x-9J0" firstAttribute="top" secondItem="qM8-tS-QTf" secondAttribute="bottom" constant="8" symbolic="YES" id="Xey-GK-LYB"/>
-                            <constraint firstItem="Fe1-la-Gy0" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="YCT-f6-1WN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LXF-4g-PuE" secondAttribute="trailing" id="aue-PJ-VlB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HCk-oc-uXA" secondAttribute="trailing" id="coi-bS-EwX"/>
-                            <constraint firstItem="G80-jc-hXW" firstAttribute="top" secondItem="HCk-oc-uXA" secondAttribute="bottom" constant="8" symbolic="YES" id="ezx-z3-BL0"/>
-                            <constraint firstItem="G80-jc-hXW" firstAttribute="width" secondItem="XjH-py-Cd0" secondAttribute="width" id="hGw-Jt-zB3"/>
-                            <constraint firstItem="HCk-oc-uXA" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="hNR-YD-uvn"/>
-                            <constraint firstItem="LXF-4g-PuE" firstAttribute="top" secondItem="GbS-sn-Llu" secondAttribute="top" id="iLa-9D-OYa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JKE-2x-9J0" secondAttribute="trailing" id="pho-Hn-W2R"/>
-                            <constraint firstItem="6iH-P6-NUm" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="tDh-3k-Iwh"/>
-                            <constraint firstItem="Fe1-la-Gy0" firstAttribute="top" secondItem="G80-jc-hXW" secondAttribute="bottom" constant="8" symbolic="YES" id="uqO-ki-Igc"/>
-                            <constraint firstItem="PFu-SZ-bdI" firstAttribute="top" secondItem="GbS-sn-Llu" secondAttribute="bottom" constant="8" symbolic="YES" id="weH-oq-lKb"/>
-                            <constraint firstItem="GbS-sn-Llu" firstAttribute="top" secondItem="PtC-Ve-cXC" secondAttribute="bottom" constant="8" symbolic="YES" id="xqk-0p-yfu"/>
+                            <constraint firstItem="G80-jc-hXW" firstAttribute="top" secondItem="HCk-oc-uXA" secondAttribute="bottom" constant="8" id="4JS-cU-hPA"/>
+                            <constraint firstItem="6iH-P6-NUm" firstAttribute="leading" secondItem="PtC-Ve-cXC" secondAttribute="leading" id="III-Np-BI0"/>
+                            <constraint firstItem="HCk-oc-uXA" firstAttribute="centerX" secondItem="G80-jc-hXW" secondAttribute="centerX" id="IVY-dy-Dbz"/>
+                            <constraint firstItem="Fe1-la-Gy0" firstAttribute="leading" secondItem="qM8-tS-QTf" secondAttribute="leading" id="Ij1-pc-FHO"/>
+                            <constraint firstItem="qM8-tS-QTf" firstAttribute="top" secondItem="Fe1-la-Gy0" secondAttribute="bottom" constant="8" id="JQD-w7-zra"/>
+                            <constraint firstItem="HCk-oc-uXA" firstAttribute="leading" secondItem="Fe1-la-Gy0" secondAttribute="leading" id="MeK-t3-mD0"/>
+                            <constraint firstItem="PFu-SZ-bdI" firstAttribute="top" secondItem="GbS-sn-Llu" secondAttribute="bottom" constant="8" id="NxK-cE-nc9"/>
+                            <constraint firstItem="HCk-oc-uXA" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="P3c-QI-wcn"/>
+                            <constraint firstItem="6iH-P6-NUm" firstAttribute="trailing" secondItem="PtC-Ve-cXC" secondAttribute="trailing" id="QUx-I9-JIT"/>
+                            <constraint firstItem="GbS-sn-Llu" firstAttribute="top" secondItem="PtC-Ve-cXC" secondAttribute="bottom" constant="8" id="RDT-kZ-1xT"/>
+                            <constraint firstItem="PtC-Ve-cXC" firstAttribute="top" secondItem="6iH-P6-NUm" secondAttribute="bottom" constant="8" id="SBD-Pn-hCn"/>
+                            <constraint firstItem="GbS-sn-Llu" firstAttribute="baseline" secondItem="LXF-4g-PuE" secondAttribute="baseline" id="SiW-xC-For"/>
+                            <constraint firstItem="Fe1-la-Gy0" firstAttribute="top" secondItem="G80-jc-hXW" secondAttribute="bottom" constant="8" id="U5e-Wg-iwV"/>
+                            <constraint firstItem="6iH-P6-NUm" firstAttribute="top" secondItem="JKE-2x-9J0" secondAttribute="bottom" constant="8" id="WGP-du-qKB"/>
+                            <constraint firstItem="PtC-Ve-cXC" firstAttribute="trailing" secondItem="LXF-4g-PuE" secondAttribute="trailing" id="Wy8-jg-hMh"/>
+                            <constraint firstItem="PtC-Ve-cXC" firstAttribute="leading" secondItem="GbS-sn-Llu" secondAttribute="leading" id="ZYp-0l-Qal"/>
+                            <constraint firstItem="JKE-2x-9J0" firstAttribute="trailing" secondItem="6iH-P6-NUm" secondAttribute="trailing" id="eUh-E6-FpT"/>
+                            <constraint firstItem="G80-jc-hXW" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" constant="-16" id="fbi-lN-Ozq"/>
+                            <constraint firstItem="LXF-4g-PuE" firstAttribute="leading" secondItem="GbS-sn-Llu" secondAttribute="trailing" constant="8" id="kh6-8a-alX"/>
+                            <constraint firstItem="HCk-oc-uXA" firstAttribute="top" secondItem="GN2-cC-hbF" secondAttribute="bottom" constant="8" id="qqX-iD-3uk"/>
+                            <constraint firstItem="JKE-2x-9J0" firstAttribute="top" secondItem="qM8-tS-QTf" secondAttribute="bottom" constant="8" id="s5Z-S2-eEj"/>
+                            <constraint firstItem="qM8-tS-QTf" firstAttribute="leading" secondItem="JKE-2x-9J0" secondAttribute="leading" id="sA9-Ve-Fka"/>
+                            <constraint firstItem="HCk-oc-uXA" firstAttribute="trailing" secondItem="Fe1-la-Gy0" secondAttribute="trailing" id="usW-IH-h7Z"/>
+                            <constraint firstItem="JKE-2x-9J0" firstAttribute="leading" secondItem="6iH-P6-NUm" secondAttribute="leading" id="xkM-57-8iY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="JWP iOS SDK Ad Tester" id="o2c-dP-3X1"/>
@@ -166,6 +166,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qJ-iy-hPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="XUV-nb-RWI">
+                    <connections>
+                        <action selector="consoleDoubleTapped:" destination="3R5-q4-A91" id="ecq-B6-I7y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1328.8" y="-168.6656671664168"/>
         </scene>
@@ -190,7 +195,7 @@
         <!--Scanner View Controller-->
         <scene sceneID="qYN-TX-ofB">
             <objects>
-                <viewController id="mZl-1P-lx0" customClass="QRScannerViewController" customModule="JWAdTester2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mZl-1P-lx0" customClass="QRScannerViewController" customModule="JWAdTester_3_9" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xVy-S5-EGl"/>
                         <viewControllerLayoutGuide type="bottom" id="fCg-t8-TSw"/>

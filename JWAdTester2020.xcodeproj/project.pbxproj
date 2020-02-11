@@ -68,7 +68,7 @@
 		11F4F398234B894C00A307F7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4879D7D39B3C744849DFDE22 /* Pods_JWAdTester2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWAdTester2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61275C3FAD64FFCD016344E4 /* Pods-JWAdTester2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAdTester2020.debug.xcconfig"; path = "Target Support Files/Pods-JWAdTester2020/Pods-JWAdTester2020.debug.xcconfig"; sourceTree = "<group>"; };
-		6A7D08EE1A5DAFD600C4E749 /* JWAdTester2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWAdTester2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7D08EE1A5DAFD600C4E749 /* JWAdTester 3.9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JWAdTester 3.9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7D08F21A5DAFD600C4E749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A7D08FC1A5DAFD600C4E749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A7D08FE1A5DAFD600C4E749 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		6A7D08EF1A5DAFD600C4E749 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A7D08EE1A5DAFD600C4E749 /* JWAdTester2020.app */,
+				6A7D08EE1A5DAFD600C4E749 /* JWAdTester 3.9.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,7 +223,7 @@
 			);
 			name = JWAdTester2020;
 			productName = JWAdTester2020;
-			productReference = 6A7D08EE1A5DAFD600C4E749 /* JWAdTester2020.app */;
+			productReference = 6A7D08EE1A5DAFD600C4E749 /* JWAdTester 3.9.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -498,7 +498,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = JWAdTester2020;
+				PRODUCT_NAME = "JWAdTester 3.9";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWAdTester2020/JWAdTester2020-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -535,7 +535,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = JWAdTester2020;
+				PRODUCT_NAME = "JWAdTester 3.9";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWAdTester2020/JWAdTester2020-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

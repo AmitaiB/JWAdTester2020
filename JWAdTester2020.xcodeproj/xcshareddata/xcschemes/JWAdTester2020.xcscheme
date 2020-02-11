@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-               BuildableName = "JWAdTester2020.app"
+               BuildableName = "JWAdTester 3.9.app"
                BlueprintName = "JWAdTester2020"
                ReferencedContainer = "container:JWAdTester2020.xcodeproj">
             </BuildableReference>
@@ -41,6 +41,15 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
+            BuildableName = "JWAdTester 3.9.app"
+            BlueprintName = "JWAdTester2020"
+            ReferencedContainer = "container:JWAdTester2020.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -53,17 +62,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-            BuildableName = "JWAdTester2020.app"
-            BlueprintName = "JWAdTester2020"
-            ReferencedContainer = "container:JWAdTester2020.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -80,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-            BuildableName = "JWAdTester2020.app"
+            BuildableName = "JWAdTester 3.9.app"
             BlueprintName = "JWAdTester2020"
             ReferencedContainer = "container:JWAdTester2020.xcodeproj">
          </BuildableReference>
@@ -92,8 +90,6 @@
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -106,7 +102,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-            BuildableName = "JWAdTester2020.app"
+            BuildableName = "JWAdTester 3.9.app"
             BlueprintName = "JWAdTester2020"
             ReferencedContainer = "container:JWAdTester2020.xcodeproj">
          </BuildableReference>
