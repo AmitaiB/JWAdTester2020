@@ -1,13 +1,13 @@
 PODS:
   - GoogleAds-IMA-iOS-SDK (3.9.2)
   - IQKeyboardManagerSwift (6.5.4)
-  - JWPlayer-SDK (3.9.0)
+  - JWPlayer-SDK (3.10.1)
   - SkyFloatingLabelTextField (3.8.0)
 
 DEPENDENCIES:
   - GoogleAds-IMA-iOS-SDK (= 3.9.2)
   - IQKeyboardManagerSwift
-  - JWPlayer-SDK (= 3.9.0)
+  - JWPlayer-SDK (= 3.10.1)
   - SkyFloatingLabelTextField
 
 SPEC REPOS:
@@ -20,9 +20,9 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 005e7670c266ee28ad72d730309f396ad7f440a0
   IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
-  JWPlayer-SDK: ebd5e480580b088318061096ec254ed2d2a5164c
+  JWPlayer-SDK: f26064b18bba1c7ad9c055d9428900f1bdea9d79
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: b0acc649809139f2aa96cf530722095ded333243
+PODFILE CHECKSUM: ad4c2c9af2629edc086c0c398c17cdde1ee6eec8
 
 COCOAPODS: 1.8.4

@@ -8,7 +8,7 @@ target 'JWAdTester2020' do
   # Pods for JWAdTester2020
 
     pod 'GoogleAds-IMA-iOS-SDK', '3.9.2'
-    pod 'JWPlayer-SDK', '3.9.0'
+    pod 'JWPlayer-SDK', '3.10.1'
     pod 'IQKeyboardManagerSwift'
     pod 'SkyFloatingLabelTextField'
 

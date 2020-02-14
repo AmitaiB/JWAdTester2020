@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-               BuildableName = "JWAdTester 3.9.app"
+               BuildableName = "JWAdTester 3.10.app"
                BlueprintName = "JWAdTester2020"
                ReferencedContainer = "container:JWAdTester2020.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-            BuildableName = "JWAdTester 3.9.app"
+            BuildableName = "JWAdTester 3.10.app"
             BlueprintName = "JWAdTester2020"
             ReferencedContainer = "container:JWAdTester2020.xcodeproj">
          </BuildableReference>
@@ -78,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-            BuildableName = "JWAdTester 3.9.app"
+            BuildableName = "JWAdTester 3.10.app"
             BlueprintName = "JWAdTester2020"
             ReferencedContainer = "container:JWAdTester2020.xcodeproj">
          </BuildableReference>
@@ -102,7 +102,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6A7D08ED1A5DAFD600C4E749"
-            BuildableName = "JWAdTester 3.9.app"
+            BuildableName = "JWAdTester 3.10.app"
             BlueprintName = "JWAdTester2020"
             ReferencedContainer = "container:JWAdTester2020.xcodeproj">
          </BuildableReference>
