@@ -15,7 +15,7 @@ To send us your questions, feedback or bug report, please send an email to suppo
 Using this demo app
 ==================
 
-The source code of a sample application (JWPlayer_Developer_Demo) is included to demonstrate a very basic setup and use of the JWPlayer iOS SDK. To use this app, please review our Quickstart Guide as well as our JW Player iOS SDK documentation.
+The source code of a sample application (JWAdTester) is included to demonstrate a moderately involved setup and use of the JWPlayer iOS SDK. This is intended to be open to the public, and available to non-technical roles through the App Store.
 
 JW Player Quickstart Guide
 ==========================
