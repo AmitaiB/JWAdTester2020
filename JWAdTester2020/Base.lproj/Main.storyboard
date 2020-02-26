@@ -10,7 +10,7 @@
         <!--JWP iOS SDK Ad Tester-->
         <scene sceneID="z1b-58-COU">
             <objects>
-                <viewController id="3R5-q4-A91" customClass="MainViewController" customModule="JWAdTester_3_9" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3R5-q4-A91" customClass="MainViewController" customModule="JWAdTester_3_10" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GN2-cC-hbF"/>
                         <viewControllerLayoutGuide type="bottom" id="PFu-SZ-bdI"/>
@@ -20,70 +20,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G80-jc-hXW">
-                                <rect key="frame" x="0.0" y="81" width="375" height="211"/>
+                                <rect key="frame" x="20" y="80.5" width="335" height="188.5"/>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G80-jc-hXW" secondAttribute="height" multiplier="16:9" id="4ya-R1-KBI"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JWP iOS SDK Version: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCk-oc-uXA">
-                                <rect key="frame" x="16" y="52" width="343" height="21"/>
+                                <rect key="frame" x="100" y="52" width="175" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="JWPlayerKey" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fe1-la-Gy0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="300" width="343" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="JWP iOS SDK License Key"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="License Key"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="License Key"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="3R5-q4-A91" id="rFw-Oz-QzZ"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Content Stream URL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qM8-tS-QTf" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="347" width="343" height="39.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Content URL"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Content URL"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="3R5-q4-A91" id="CeY-k0-dJz"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ad Tag URL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JKE-2x-9J0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="394.5" width="343" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Ad Tag URL"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Ad Tag"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ad Tag"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="3R5-q4-A91" id="e6G-Mz-E0U"/>
-                                </connections>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6iH-P6-NUm">
-                                <rect key="frame" x="16" y="441.5" width="343" height="32"/>
-                                <segments>
-                                    <segment title="VAST"/>
-                                    <segment title="Google IMA"/>
-                                </segments>
-                                <connections>
-                                    <action selector="adClientValueChanged:" destination="3R5-q4-A91" eventType="valueChanged" id="zeF-Ta-vPs"/>
-                                </connections>
-                            </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Console Output..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PtC-Ve-cXC">
-                                <rect key="frame" x="16" y="480.5" width="343" height="91.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PtC-Ve-cXC">
+                                <rect key="frame" x="24" y="430.5" width="327" height="141.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="91.5" id="BCP-Gi-J3z"/>
-                                </constraints>
+                                <string key="text">Console Output...
+Double-tap to clear...</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -92,75 +46,109 @@
                                     <outletCollection property="gestureRecognizers" destination="XUV-nb-RWI" appends="YES" id="HzD-t6-Y8y"/>
                                 </connections>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-sn-Llu" customClass="RoundedButton" customModule="JWAdTester_3_9" customModuleProvider="target">
-                                <rect key="frame" x="16" y="580" width="167.5" height="30"/>
-                                <color key="backgroundColor" red="0.92549019607843142" green="0.0" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="167.5" id="Bp2-wY-aT2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.84705882352941175" green="0.8666666666666667" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Apply"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="applyButtonTapped:" destination="3R5-q4-A91" eventType="touchUpInside" id="q4v-Bc-xqT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXF-4g-PuE" customClass="RoundedButton" customModule="JWAdTester_3_9" customModuleProvider="target">
-                                <rect key="frame" x="191.5" y="580" width="167.5" height="30"/>
-                                <color key="backgroundColor" red="0.92549019610000005" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.84705882349999995" green="0.86666666670000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="QR"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="mZl-1P-lx0" kind="presentation" identifier="toScannerVCSegue" id="zVl-PE-QqS"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RLd-HY-sen">
+                                <rect key="frame" x="24" y="580" width="327" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-sn-Llu" customClass="RoundedButton" customModule="JWAdTester_3_10" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="30"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.0" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" red="0.84705882352941175" green="0.8666666666666667" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Apply"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="applyButtonTapped:" destination="3R5-q4-A91" eventType="touchUpInside" id="q4v-Bc-xqT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXF-4g-PuE" customClass="RoundedButton" customModule="JWAdTester_3_10" customModuleProvider="target">
+                                        <rect key="frame" x="167.5" y="0.0" width="159.5" height="30"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.0" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" red="0.84705882349999995" green="0.86666666670000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="QR"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="mZl-1P-lx0" kind="presentation" identifier="toScannerVCSegue" id="zVl-PE-QqS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="u7P-rZ-juk">
+                                <rect key="frame" x="24" y="277" width="327" height="145.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" text="Content Stream URL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qM8-tS-QTf" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Content URL"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Content URL"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="3R5-q4-A91" id="CeY-k0-dJz"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" text="Ad Tag URL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JKE-2x-9J0" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="55" width="327" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Ad Tag URL"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Ad Tag"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ad Tag"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="3R5-q4-A91" id="e6G-Mz-E0U"/>
+                                        </connections>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6iH-P6-NUm">
+                                        <rect key="frame" x="0.0" y="114.5" width="327" height="32"/>
+                                        <segments>
+                                            <segment title="VAST"/>
+                                            <segment title="Google IMA"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="adClientValueChanged:" destination="3R5-q4-A91" eventType="valueChanged" id="zeF-Ta-vPs"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="G80-jc-hXW" firstAttribute="top" secondItem="HCk-oc-uXA" secondAttribute="bottom" constant="8" id="4JS-cU-hPA"/>
-                            <constraint firstItem="6iH-P6-NUm" firstAttribute="leading" secondItem="PtC-Ve-cXC" secondAttribute="leading" id="III-Np-BI0"/>
-                            <constraint firstItem="HCk-oc-uXA" firstAttribute="centerX" secondItem="G80-jc-hXW" secondAttribute="centerX" id="IVY-dy-Dbz"/>
-                            <constraint firstItem="Fe1-la-Gy0" firstAttribute="leading" secondItem="qM8-tS-QTf" secondAttribute="leading" id="Ij1-pc-FHO"/>
-                            <constraint firstItem="qM8-tS-QTf" firstAttribute="top" secondItem="Fe1-la-Gy0" secondAttribute="bottom" constant="8" id="JQD-w7-zra"/>
-                            <constraint firstItem="HCk-oc-uXA" firstAttribute="leading" secondItem="Fe1-la-Gy0" secondAttribute="leading" id="MeK-t3-mD0"/>
-                            <constraint firstItem="PFu-SZ-bdI" firstAttribute="top" secondItem="GbS-sn-Llu" secondAttribute="bottom" constant="8" id="NxK-cE-nc9"/>
-                            <constraint firstItem="HCk-oc-uXA" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" id="P3c-QI-wcn"/>
-                            <constraint firstItem="6iH-P6-NUm" firstAttribute="trailing" secondItem="PtC-Ve-cXC" secondAttribute="trailing" id="QUx-I9-JIT"/>
-                            <constraint firstItem="GbS-sn-Llu" firstAttribute="top" secondItem="PtC-Ve-cXC" secondAttribute="bottom" constant="8" id="RDT-kZ-1xT"/>
-                            <constraint firstItem="PtC-Ve-cXC" firstAttribute="top" secondItem="6iH-P6-NUm" secondAttribute="bottom" constant="8" id="SBD-Pn-hCn"/>
-                            <constraint firstItem="GbS-sn-Llu" firstAttribute="baseline" secondItem="LXF-4g-PuE" secondAttribute="baseline" id="SiW-xC-For"/>
-                            <constraint firstItem="Fe1-la-Gy0" firstAttribute="top" secondItem="G80-jc-hXW" secondAttribute="bottom" constant="8" id="U5e-Wg-iwV"/>
-                            <constraint firstItem="6iH-P6-NUm" firstAttribute="top" secondItem="JKE-2x-9J0" secondAttribute="bottom" constant="8" id="WGP-du-qKB"/>
-                            <constraint firstItem="PtC-Ve-cXC" firstAttribute="trailing" secondItem="LXF-4g-PuE" secondAttribute="trailing" id="Wy8-jg-hMh"/>
-                            <constraint firstItem="PtC-Ve-cXC" firstAttribute="leading" secondItem="GbS-sn-Llu" secondAttribute="leading" id="ZYp-0l-Qal"/>
-                            <constraint firstItem="JKE-2x-9J0" firstAttribute="trailing" secondItem="6iH-P6-NUm" secondAttribute="trailing" id="eUh-E6-FpT"/>
-                            <constraint firstItem="G80-jc-hXW" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" constant="-16" id="fbi-lN-Ozq"/>
-                            <constraint firstItem="LXF-4g-PuE" firstAttribute="leading" secondItem="GbS-sn-Llu" secondAttribute="trailing" constant="8" id="kh6-8a-alX"/>
-                            <constraint firstItem="HCk-oc-uXA" firstAttribute="top" secondItem="GN2-cC-hbF" secondAttribute="bottom" constant="8" id="qqX-iD-3uk"/>
-                            <constraint firstItem="JKE-2x-9J0" firstAttribute="top" secondItem="qM8-tS-QTf" secondAttribute="bottom" constant="8" id="s5Z-S2-eEj"/>
-                            <constraint firstItem="qM8-tS-QTf" firstAttribute="leading" secondItem="JKE-2x-9J0" secondAttribute="leading" id="sA9-Ve-Fka"/>
-                            <constraint firstItem="HCk-oc-uXA" firstAttribute="trailing" secondItem="Fe1-la-Gy0" secondAttribute="trailing" id="usW-IH-h7Z"/>
-                            <constraint firstItem="JKE-2x-9J0" firstAttribute="leading" secondItem="6iH-P6-NUm" secondAttribute="leading" id="xkM-57-8iY"/>
+                            <constraint firstItem="G80-jc-hXW" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leading" constant="20" symbolic="YES" id="ACl-R4-XDn"/>
+                            <constraint firstItem="PtC-Ve-cXC" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" constant="8" id="AWL-oS-LxT"/>
+                            <constraint firstAttribute="trailing" secondItem="G80-jc-hXW" secondAttribute="trailing" constant="20" symbolic="YES" id="Ad3-Pu-g4k"/>
+                            <constraint firstItem="PtC-Ve-cXC" firstAttribute="top" secondItem="u7P-rZ-juk" secondAttribute="bottom" constant="8" id="G0U-RB-0S7"/>
+                            <constraint firstItem="HCk-oc-uXA" firstAttribute="top" secondItem="GN2-cC-hbF" secondAttribute="bottom" constant="8" id="IkQ-4j-BVH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u7P-rZ-juk" secondAttribute="trailing" constant="8" id="Kgi-dS-xBB"/>
+                            <constraint firstItem="PFu-SZ-bdI" firstAttribute="top" secondItem="RLd-HY-sen" secondAttribute="bottom" constant="8" id="VAf-db-rZl"/>
+                            <constraint firstItem="u7P-rZ-juk" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" constant="8" id="Xb2-DD-EvX"/>
+                            <constraint firstItem="RLd-HY-sen" firstAttribute="top" secondItem="PtC-Ve-cXC" secondAttribute="bottom" constant="8" id="fsK-qd-mvf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RLd-HY-sen" secondAttribute="trailing" constant="8" id="gK3-iY-ErX"/>
+                            <constraint firstItem="RLd-HY-sen" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" constant="8" id="kzJ-vS-Nyu"/>
+                            <constraint firstItem="HCk-oc-uXA" firstAttribute="centerX" secondItem="XjH-py-Cd0" secondAttribute="centerX" id="uLB-UO-kFM"/>
+                            <constraint firstItem="u7P-rZ-juk" firstAttribute="top" secondItem="G80-jc-hXW" secondAttribute="bottom" constant="8" id="wfm-bL-bQk"/>
+                            <constraint firstItem="G80-jc-hXW" firstAttribute="top" secondItem="HCk-oc-uXA" secondAttribute="bottom" constant="8" symbolic="YES" id="yJR-Bi-7Wk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PtC-Ve-cXC" secondAttribute="trailing" constant="8" id="zWR-fr-Y0x"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="JWP iOS SDK Ad Tester" id="o2c-dP-3X1"/>
+                    <navigationItem key="navigationItem" title="JWP iOS SDK Ad Tester" id="o2c-dP-3X1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="cV9-I9-ZA0"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="adClientControl" destination="6iH-P6-NUm" id="21O-Ep-RCc"/>
                         <outlet property="adTagURLField" destination="JKE-2x-9J0" id="7es-ak-SHP"/>
                         <outlet property="conoleOutputView" destination="PtC-Ve-cXC" id="QuK-tk-gek"/>
                         <outlet property="contentURLField" destination="qM8-tS-QTf" id="2zH-t7-gOf"/>
-                        <outlet property="licenseKeyField" destination="Fe1-la-Gy0" id="FV5-pU-SAB"/>
                         <outlet property="playerContainerView" destination="G80-jc-hXW" id="NkA-XA-6c6"/>
                         <outlet property="versionLabel" destination="HCk-oc-uXA" id="3DD-Vn-JGZ"/>
                     </connections>
@@ -195,7 +183,7 @@
         <!--Scanner View Controller-->
         <scene sceneID="qYN-TX-ofB">
             <objects>
-                <viewController id="mZl-1P-lx0" customClass="QRScannerViewController" customModule="JWAdTester_3_9" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mZl-1P-lx0" customClass="QRScannerViewController" customModule="JWAdTester_3_10" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xVy-S5-EGl"/>
                         <viewControllerLayoutGuide type="bottom" id="fCg-t8-TSw"/>
@@ -212,4 +200,7 @@
             <point key="canvasLocation" x="2169" y="-170"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
