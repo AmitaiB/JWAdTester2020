@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111475C4240721C0000619B4 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 111475C3240721C0000619B4 /* KeychainSwift */; };
 		118E8ECD22259B43006D0685 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ECC22259B43006D0685 /* MainViewController.swift */; };
 		11C7029323DB56F500456F3D /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7029223DB56F500456F3D /* QRScannerViewController.swift */; };
 		11C7029523DB7B2500456F3D /* Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7029423DB7B2500456F3D /* Memento.swift */; };
@@ -81,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111475C4240721C0000619B4 /* KeychainSwift in Frameworks */,
 				FB4565D645C4DF0F6801E26C /* Pods_JWAdTester2020.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +224,9 @@
 			dependencies = (
 			);
 			name = JWAdTester2020;
+			packageProductDependencies = (
+				111475C3240721C0000619B4 /* KeychainSwift */,
+			);
 			productName = JWAdTester2020;
 			productReference = 6A7D08EE1A5DAFD600C4E749 /* JWAdTester 3.10.app */;
 			productType = "com.apple.product-type.application";
@@ -253,6 +258,9 @@
 				Base,
 			);
 			mainGroup = 6A7D08E51A5DAFD600C4E749;
+			packageReferences = (
+				111475C2240721C0000619B4 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 6A7D08EF1A5DAFD600C4E749 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -314,6 +322,7 @@
 				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -321,6 +330,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,8 +473,9 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -491,7 +502,10 @@
 				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = JWAdTester2020/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -528,7 +542,10 @@
 				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = JWAdTester2020/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -565,6 +582,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		111475C2240721C0000619B4 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		111475C3240721C0000619B4 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 111475C2240721C0000619B4 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A7D08E61A5DAFD600C4E749 /* Project object */;
 }

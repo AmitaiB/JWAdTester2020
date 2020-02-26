@@ -8,6 +8,8 @@
 
 import Foundation
 import IQKeyboardManagerSwift
+import KeychainSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         IQKeyboardManager.shared.enable = true
-
+        
+        if let storedLicense = keychain.get(L10n.licenseKey) {
+            JWPlayerController.setPlayerKey(storedLicense)
+        }
+        
         return true
     }
     
@@ -27,3 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         (window?.rootViewController as? MainViewController)?.syncToDefaults()
     }
 }
+
+public let keychain: KeychainSwift = {
+    let kChain = KeychainSwift()
+    kChain.synchronizable = true
+    kChain.accessGroup = L10n.comJwplayerJWAdTester2020
+    return kChain
+}()

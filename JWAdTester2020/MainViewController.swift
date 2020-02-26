@@ -8,6 +8,9 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import SCLAlertView
+import KeychainSwift
+
 
 class MainViewController: UIViewController {
     @IBOutlet weak var playerContainerView: UIView!
@@ -16,12 +19,11 @@ class MainViewController: UIViewController {
     private var adConfig = JWAdConfig()
     
     @IBOutlet weak var versionLabel: UILabel!
-    @IBOutlet weak var licenseKeyField: SkyFloatingLabelTextField!
     @IBOutlet weak var contentURLField: SkyFloatingLabelTextField!
     @IBOutlet weak var adTagURLField: SkyFloatingLabelTextField!
     @IBOutlet weak var adClientControl: UISegmentedControl!
     @IBOutlet weak var conoleOutputView: UITextView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,6 +66,33 @@ class MainViewController: UIViewController {
         conoleOutputView.text = ""
     }
     
+    // Used to set the JWPlayerKey
+    @IBAction func gearIconTapped(_ sender: Any) {
+        let appearance = SCLAlertView.SCLAppearance(
+            showCloseButton: false,
+            hideWhenBackgroundViewIsTapped: true,
+            dynamicAnimatorActive: false
+            )
+        let keyEntryAlert = SCLAlertView(appearance: appearance)
+        let inputField = keyEntryAlert.addTextField("License Key")
+        keyEntryAlert.addButton("Save") {
+            self.keyUpdated(to: inputField.text)
+        }
+        
+        keyEntryAlert.showEdit("License Key", subTitle: "Enter your 48 character SDK License Key")
+    }
+    
+    private func keyUpdated(to newKey: String?) {
+        guard
+            let newKey = newKey?.trimmingCharacters(in: .whitespacesAndNewlines),
+            newKey.count == 48
+            else { return }
+        
+        keychain.set(newKey, forKey: L10n.licenseKey)
+        JWPlayerController.setPlayerKey(newKey)
+    }
+    
+    /// The unique name of the shared user defaults group for the apps of different frameworks.
     var groupDefaults: UserDefaults? { UserDefaults(suiteName: L10n.groupComJwplayerJWAdTester2020) }
 }
 
@@ -73,8 +102,6 @@ extension MainViewController {
             qrScannerVC.delegate = self
         }
     }
-    
-    
 }
 
 // MARK: QRScannerDelegate
@@ -93,8 +120,6 @@ extension MainViewController: UITextFieldDelegate {
         let textInput = textField.text ?? ""
         
         switch textField {
-            case licenseKeyField:
-                JWPlayerController.setPlayerKey(textInput)
             case contentURLField:
                 config.file = textInput
             case adTagURLField:
@@ -129,7 +154,7 @@ extension MainViewController: UITextFieldDelegate {
     }
     
     func applyTheme() {
-        [licenseKeyField, contentURLField, adTagURLField].forEach {
+        [contentURLField, adTagURLField].forEach {
             $0?.lineColor          = ColorName.abyss.color
             $0?.titleColor         = ColorName.fog.color
             $0?.selectedTitleColor = ColorName.fogDark.color
@@ -150,8 +175,7 @@ extension MainViewController: UITextViewDelegate {
 extension MainViewController: PlayerConfigMementoConvertible {
     // Store in Group Container when any field is updated
     var memento: PlayerConfigMemento {
-        PlayerConfigMemento(key: licenseKeyField.text,
-                            contentURL: contentURLField.text,
+        PlayerConfigMemento(contentURL: contentURLField.text,
                             adTagURL: adTagURLField.text,
                             isGoogima: adClientControl.selectedSegmentIndex == 1)
     }
@@ -159,16 +183,9 @@ extension MainViewController: PlayerConfigMementoConvertible {
     func apply(memento: PlayerConfigMemento?) {
         guard let memento = memento else { return }
         
-        keyUpdated(to: memento.key)
         contentURLUpdated(to: memento.contentURL)
         adTagUpdated(to: memento.adTagURL)
         adConfig.client = memento.isGoogima ? .googima : .vast
-    }
-    
-    private func keyUpdated(to newKey: String?) {
-        guard let newKey = newKey else { return }
-        licenseKeyField.text = newKey
-        JWPlayerController.setPlayerKey(newKey)
     }
     
     private func contentURLUpdated(to newURL: String?) {

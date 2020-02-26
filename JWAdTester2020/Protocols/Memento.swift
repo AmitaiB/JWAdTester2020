@@ -9,7 +9,6 @@
 import Foundation
 
 struct PlayerConfigMemento: Codable {
-    var key: String?
     var contentURL: String?
     var adTagURL: String?
     var isGoogima = false

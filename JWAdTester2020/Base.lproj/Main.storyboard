@@ -142,7 +142,11 @@ Double-tap to clear...</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="JWP iOS SDK Ad Tester" id="o2c-dP-3X1">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="cV9-I9-ZA0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="cV9-I9-ZA0">
+                            <connections>
+                                <action selector="gearIconTapped:" destination="3R5-q4-A91" id="dG2-ar-AYw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="adClientControl" destination="6iH-P6-NUm" id="21O-Ep-RCc"/>

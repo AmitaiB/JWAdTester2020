@@ -10,10 +10,14 @@ import Foundation
 
 // swiftlint:disable function_parameter_count identifier_name line_length type_body_length
 internal enum L10n {
+  /// licenseKey
+  internal static let licenseKey = L10n.tr("localizable", "licenseKey")
   /// MementoKey
   internal static let mementoKey = L10n.tr("localizable", "MementoKey")
   /// SelectedThemeKey
   internal static let selectedThemeKey = L10n.tr("localizable", "SelectedThemeKey")
+  /// com.jwplayer.JWAdTester2020
+  internal static let comJwplayerJWAdTester2020 = L10n.tr("localizable", "com.jwplayer.JWAdTester2020")
   /// group.com.jwplayer.JWAdTester2020
   internal static let groupComJwplayerJWAdTester2020 = L10n.tr("localizable", "group.com.jwplayer.JWAdTester2020")
 }
