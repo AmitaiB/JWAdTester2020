@@ -8,12 +8,13 @@
 
 import AVFoundation
 import UIKit
+import Reusable
 
 protocol QRScannerDelegate: class {
     func didGetString(_ string: String)
 }
 
-class QRScannerViewController: UIViewController {
+class QRScannerViewController: UIViewController, StoryboardBased {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     

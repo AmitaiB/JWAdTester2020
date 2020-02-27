@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		111475C4240721C0000619B4 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 111475C3240721C0000619B4 /* KeychainSwift */; };
+		111475C924073BEE000619B4 /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 111475C824073BEE000619B4 /* NotificationBannerSwift */; };
+		111475D1240834D0000619B4 /* QRScannerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111475D0240834D0000619B4 /* QRScannerViewController.storyboard */; };
 		118E8ECD22259B43006D0685 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E8ECC22259B43006D0685 /* MainViewController.swift */; };
 		11C7029323DB56F500456F3D /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7029223DB56F500456F3D /* QRScannerViewController.swift */; };
 		11C7029523DB7B2500456F3D /* Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7029423DB7B2500456F3D /* Memento.swift */; };
@@ -46,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		111475D0240834D0000619B4 /* QRScannerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = QRScannerViewController.storyboard; path = Pods/QRScannerViewController.storyboard; sourceTree = SOURCE_ROOT; };
 		118E8ECC22259B43006D0685 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		11C7029223DB56F500456F3D /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		11C7029423DB7B2500456F3D /* Memento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memento.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				111475C4240721C0000619B4 /* KeychainSwift in Frameworks */,
+				111475C924073BEE000619B4 /* NotificationBannerSwift in Frameworks */,
 				FB4565D645C4DF0F6801E26C /* Pods_JWAdTester2020.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,14 +175,15 @@
 		6A7D08F01A5DAFD600C4E749 /* JWAdTester2020 */ = {
 			isa = PBXGroup;
 			children = (
-				118E8ECC22259B43006D0685 /* MainViewController.swift */,
 				11C7029223DB56F500456F3D /* QRScannerViewController.swift */,
+				111475D0240834D0000619B4 /* QRScannerViewController.storyboard */,
+				118E8ECC22259B43006D0685 /* MainViewController.swift */,
+				6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */,
 				11E097B623DA63A20003315A /* Extensions */,
 				11E097B823DA63BC0003315A /* UI Elements */,
 				11E097B723DA63B00003315A /* Protocols */,
 				11C7029E23DE891700456F3D /* SwiftGenFiles */,
 				11E097AC23D8F63B0003315A /* JWAdTester2020.entitlements */,
-				6A7D08FB1A5DAFD600C4E749 /* Main.storyboard */,
 				11C7029A23DE520800456F3D /* AppDelegate.swift */,
 				8AEA39F61AFAAE22008A8C8A /* JWAdTester2020-Bridging-Header.h */,
 				6A7D08F21A5DAFD600C4E749 /* Info.plist */,
@@ -226,6 +231,7 @@
 			name = JWAdTester2020;
 			packageProductDependencies = (
 				111475C3240721C0000619B4 /* KeychainSwift */,
+				111475C824073BEE000619B4 /* NotificationBannerSwift */,
 			);
 			productName = JWAdTester2020;
 			productReference = 6A7D08EE1A5DAFD600C4E749 /* JWAdTester 3.10.app */;
@@ -260,6 +266,7 @@
 			mainGroup = 6A7D08E51A5DAFD600C4E749;
 			packageReferences = (
 				111475C2240721C0000619B4 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				111475C724073BEE000619B4 /* XCRemoteSwiftPackageReference "NotificationBanner" */,
 			);
 			productRefGroup = 6A7D08EF1A5DAFD600C4E749 /* Products */;
 			projectDirPath = "";
@@ -284,6 +291,7 @@
 				11C702B323DE8DB500456F3D /* open-sans in Resources */,
 				11C702B123DE8DB500456F3D /* lato in Resources */,
 				11C7029D23DE88D100456F3D /* swiftgen.yml in Resources */,
+				111475D1240834D0000619B4 /* QRScannerViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,21 +325,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JWAdTester2020/Pods-JWAdTester2020-frameworks.sh",
-				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
-				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
-				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JWAdTester2020/Pods-JWAdTester2020-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JWAdTester2020/Pods-JWAdTester2020-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -592,6 +591,14 @@
 				minimumVersion = 19.0.0;
 			};
 		};
+		111475C724073BEE000619B4 /* XCRemoteSwiftPackageReference "NotificationBanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Daltron/NotificationBanner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -599,6 +606,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 111475C2240721C0000619B4 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		111475C824073BEE000619B4 /* NotificationBannerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 111475C724073BEE000619B4 /* XCRemoteSwiftPackageReference "NotificationBanner" */;
+			productName = NotificationBannerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

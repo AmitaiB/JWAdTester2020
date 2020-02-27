@@ -10,6 +10,7 @@ import UIKit
 import SkyFloatingLabelTextField
 import SCLAlertView
 import KeychainSwift
+import NotificationBannerSwift
 
 
 class MainViewController: UIViewController {
@@ -62,6 +63,12 @@ class MainViewController: UIViewController {
         }
     }
     
+    @IBAction func qrButtonTapped(_ sender: Any) {
+        let qrVC = QRScannerViewController.instantiate()
+        qrVC.delegate = self
+        present(qrVC, animated: true)
+    }
+    
     @IBAction func consoleDoubleTapped(_ sender: Any) {
         conoleOutputView.text = ""
     }
@@ -82,6 +89,7 @@ class MainViewController: UIViewController {
         keyEntryAlert.showEdit("License Key", subTitle: "Enter your 48 character SDK License Key")
     }
     
+    // TODO: Expand Validation
     private func keyUpdated(to newKey: String?) {
         guard
             let newKey = newKey?.trimmingCharacters(in: .whitespacesAndNewlines),

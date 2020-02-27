@@ -12,4 +12,5 @@ target 'JWAdTester2020' do
     pod 'IQKeyboardManagerSwift'
     pod 'SkyFloatingLabelTextField'
     pod 'SCLAlertView'
+    pod 'Reusable'
 end

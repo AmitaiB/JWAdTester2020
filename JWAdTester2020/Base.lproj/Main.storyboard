@@ -29,7 +29,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JWP iOS SDK Version: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCk-oc-uXA">
                                 <rect key="frame" x="100" y="52" width="175" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PtC-Ve-cXC">
@@ -76,7 +75,7 @@ Double-tap to clear...</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="mZl-1P-lx0" kind="presentation" identifier="toScannerVCSegue" id="zVl-PE-QqS"/>
+                                            <action selector="qrButtonTapped:" destination="3R5-q4-A91" eventType="touchUpInside" id="SPF-tE-Ed0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -122,7 +121,7 @@ Double-tap to clear...</string>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="G80-jc-hXW" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leading" constant="20" symbolic="YES" id="ACl-R4-XDn"/>
                             <constraint firstItem="PtC-Ve-cXC" firstAttribute="leading" secondItem="XjH-py-Cd0" secondAttribute="leadingMargin" constant="8" id="AWL-oS-LxT"/>
@@ -183,25 +182,6 @@ Double-tap to clear...</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02x-hW-Htu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="526" y="-169"/>
-        </scene>
-        <!--Scanner View Controller-->
-        <scene sceneID="qYN-TX-ofB">
-            <objects>
-                <viewController id="mZl-1P-lx0" customClass="QRScannerViewController" customModule="JWAdTester_3_10" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xVy-S5-EGl"/>
-                        <viewControllerLayoutGuide type="bottom" id="fCg-t8-TSw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="N3e-hl-gFp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="28k-Iy-Xhn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Og-kV-Ynf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2169" y="-170"/>
         </scene>
     </scenes>
     <resources>
