@@ -11,6 +11,7 @@ import SkyFloatingLabelTextField
 import SCLAlertView
 import KeychainSwift
 import NotificationBannerSwift
+import Popover
 
 
 class MainViewController: UIViewController {
@@ -87,6 +88,29 @@ class MainViewController: UIViewController {
         }
         
         keyEntryAlert.showEdit("License Key", subTitle: "Enter your 48 character SDK License Key")
+    }
+    
+    @IBOutlet var popupCell: UITableViewCell!
+    @IBAction func fieldLongPressed(_ sender: UILongPressGestureRecognizer) {
+        
+        guard sender.state == .began,
+            let senderView = sender.view  as? UITextField
+            else { return }
+            
+        let options: [PopoverOption] = [.type(.up),
+                                        .showBlackOverlay(true)]
+        let popover = Popover(options: options,
+                              showHandler: nil,
+                              dismissHandler: nil)
+        
+        popupCell.frame = CGRect(x: 0, y: 0,
+                                 width: senderView.bounds.width * 0.9,
+                                 height: 1)
+        popupCell.textLabel?.numberOfLines = 0
+        popupCell.textLabel?.text = senderView.text
+        popupCell.sizeToFit()
+
+        popover.show(popupCell, fromView: senderView)
     }
     
     // TODO: Expand Validation
@@ -216,203 +240,208 @@ enum AdClient: Int, CaseIterable {
 // for console output
 // MARK: JWPlayerDelegate
 extension MainViewController: JWPlayerDelegate {
+    private func logToConsole(msg: String, shouldScroll: Bool = true) {
+        conoleOutputView.text += "\n" + msg
+        if shouldScroll {conoleOutputView.scrollToBottom()}
+    }
+    
     func onSeeked() {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onComplete() {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onBeforePlay() {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onPlayAttempt() {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onDisplayClick() {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onBeforeComplete() {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onPlaylistComplete() {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onMeta(_ event: JWEvent & JWMetaEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onSeek(_ event: JWEvent & JWSeekEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onError(_ event: JWEvent & JWErrorEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onReady(_ event: JWEvent & JWReadyEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAdMeta(_ event: JWAdEvent & JWMetaEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onBuffer(_ event: JWEvent & JWBufferEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onLevels(_ event: JWEvent & JWLevelsEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onResize(_ event: JWEvent & JWResizeEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onWarning(_ event: JWEvent & JWErrorEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAdError(_ event: JWAdEvent & JWErrorEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onIdle(_ event: JWEvent & JWStateChangeEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onPlay(_ event: JWEvent & JWStateChangeEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onSetupError(_ event: JWEvent & JWErrorEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onControls(_ event: JWEvent & JWControlsEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onControlBarVisible(_ event: JWEvent & JWControlsEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onPause(_ event: JWEvent & JWStateChangeEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onPlaylist(_ event: JWEvent & JWPlaylistEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAdClick(_ event: JWAdEvent & JWAdDetailEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAudioTracks(_ event: JWEvent & JWLevelsEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
 //    func onAdBreakEnd(_ event: JWAdEvent & JWAdBreakEvent) {
-//        conoleOutputView.text += #function + "\n"
+//        logToConsole(msg: #function)
 //    }
 //
     func onAdSkipped(_ event: JWAdEvent & JWAdDetailEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAdStarted(_ event: JWAdEvent & JWAdDetailEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAdComplete(_ event: JWAdEvent & JWAdDetailEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAdRequest(_ event: JWAdEvent & JWAdRequestEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onFirstFrame(_ event: JWEvent & JWFirstFrameEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onFullscreen(_ event: JWEvent & JWFullscreenEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
 //    func onAdBreakStart(_ event: JWAdEvent & JWAdBreakEvent) {
-//        conoleOutputView.text += #function + "\n"
+//        logToConsole(msg: #function)
 //    }
     
     func onAdPlay(_ event: JWAdEvent & JWAdStateChangeEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAdPause(_ event: JWAdEvent & JWAdStateChangeEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAdSchedule(_ event: JWAdEvent & JWAdScheduleEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onBufferChange(_ event: JWEvent & JWBufferChangeEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onCaptionsList(_ event: JWEvent & JWCaptionsListEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onPlaylistItem(_ event: JWEvent & JWPlaylistItemEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAdCompanions(_ event: JWAdEvent & JWAdCompanionsEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAdImpression(_ event: JWAdEvent & JWAdImpressionEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onLevelsChanged(_ event: JWEvent & JWLevelsChangedEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onCaptionsChanged(_ event: JWEvent & JWTrackChangedEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onAudioTrackChanged(_ event: JWEvent & JWTrackChangedEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onFullscreenRequested(_ event: JWEvent & JWFullscreenEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onPlaybackRateChanged(_ event: JWEvent & JWPlaybackRateEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onRelatedOpen(_ event: JWRelatedEvent & JWRelatedOpenEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onRelatedPlay(_ event: JWRelatedEvent & JWRelatedPlayEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
     
     func onRelatedClose(_ event: JWRelatedEvent & JWRelatedInteractionEvent) {
-        conoleOutputView.text += #function + "\n"
+        logToConsole(msg: #function)
     }
 }

@@ -1,7 +1,8 @@
 PODS:
   - GoogleAds-IMA-iOS-SDK (3.9.2)
   - IQKeyboardManagerSwift (6.5.4)
-  - JWPlayer-SDK (3.10.1)
+  - JWPlayer-SDK (3.10.2)
+  - Popover (1.3.0)
   - Reusable (4.1.0):
     - Reusable/Storyboard (= 4.1.0)
     - Reusable/View (= 4.1.0)
@@ -13,7 +14,8 @@ PODS:
 DEPENDENCIES:
   - GoogleAds-IMA-iOS-SDK (= 3.9.2)
   - IQKeyboardManagerSwift
-  - JWPlayer-SDK (= 3.10.1)
+  - JWPlayer-SDK (= 3.10.2)
+  - Popover
   - Reusable
   - SCLAlertView
   - SkyFloatingLabelTextField
@@ -23,6 +25,7 @@ SPEC REPOS:
     - GoogleAds-IMA-iOS-SDK
     - IQKeyboardManagerSwift
     - JWPlayer-SDK
+    - Popover
     - Reusable
     - SCLAlertView
     - SkyFloatingLabelTextField
@@ -30,11 +33,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 005e7670c266ee28ad72d730309f396ad7f440a0
   IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
-  JWPlayer-SDK: f26064b18bba1c7ad9c055d9428900f1bdea9d79
+  JWPlayer-SDK: a50a14eb0dd1172e5acf8dd6b768777323b69804
+  Popover: 10e1d9528f81d9504df984b7b3f491292bc1822d
   Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: d83abca28853dd3d249238b80cb879034c4fabe7
+PODFILE CHECKSUM: db2acfe01aa64a031bfeb0f4e3aae75115cd1c66
 
 COCOAPODS: 1.9.0

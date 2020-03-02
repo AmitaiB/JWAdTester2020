@@ -26,3 +26,12 @@ extension UIView {
         NSLayoutConstraint.activate(horizontalConstraints + verticalConstraints)
     }
 }
+
+extension UITextView {
+    func scrollToBottom() {
+        guard !text.isEmpty else { return }
+        
+        let bottom = NSRange(location: text.count - 1, length: 1)
+        scrollRangeToVisible(bottom)
+    }
+}
